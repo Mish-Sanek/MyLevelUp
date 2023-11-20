@@ -1,0 +1,19 @@
+@font-face {
+  font-family: 'Rebond Grotesque Bold';
+  src: url('fonts/RebondGrotesqueBold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Rebond Grotesque Semibold';
+  src: url('fonts/RebondGrotesqueSemibold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Aeonik Regular';
+  src: url('fonts/Aeonik.woff2') format('woff2'), url('fonts/Aeonik.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Aeonik Medium';
+  src: url('fonts/AeonikMedium.woff2') format('woff2'), url('fonts/AeonikMedium.woff') format('woff');
+}
