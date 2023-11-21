@@ -19,6 +19,52 @@
   background: #0B0B22;
 }
 
+.app a,
+.contact-us__form button,
+.contact-us__form input:focus,
+.page-footer__info a::after {
+  transition: color 0.5s ease, background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease, transform 0.5s ease, opacity 0.5s ease, filter 0.5s ease;
+}
+
+.page-header a:not(.page-header__logo):hover,
+.founders__user-links a:hover {
+  transform: scale(1.1);
+  opacity: 0.7;
+}
+
+.page-hero__footer a:first-child:hover,
+.job__info-footer a:first-child:hover {
+  background-color: #3B83FE;
+  border-color: #3B83FE;
+}
+
+.page-hero__footer a:last-child:hover,
+.job__info-footer a:last-child:hover,
+.about-hero__links a:hover {
+  box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.2);
+}
+
+.tomorrow__list-item a:hover,
+.stories__item a:hover,
+.contact-us__form button:hover,
+.contact-us__form input:focus {
+  filter: invert(1);
+}
+
+.page-footer__info a:hover {color: #ffffff;}
+
+.page-footer__info a:hover::after {transform: translate3d(5px,0,0);}
+
+.page-footer__bottom a:hover {text-decoration: underline;}
+
+.redefining__info-footer a:hover {
+  box-shadow: 0 0 0 2px #ffffff;
+}
+
+
+
+/* page header */
+
 .page-header {
   position: fixed;
   top: 26px;
@@ -209,6 +255,10 @@
   color: #ffffff;
   border-radius: 40px;
   border: 1px solid #ffffff;
+}
+
+.contact-us__form input:focus {
+  filter: invert(1);
 }
 
 .contact-us__form input::placeholder {color: #ffffff;}
