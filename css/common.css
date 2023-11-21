@@ -61,6 +61,8 @@
   box-shadow: 0 0 0 2px #ffffff;
 }
 
+.page-footer__mail:hover {opacity: 0.6;}
+
 
 
 /* page header */
