@@ -8,6 +8,17 @@
   overflow: hidden;
 }
 
+.big-block {background: linear-gradient(180deg, #E3F2FD, #FFF);}
+
+.big-block–gray {
+  background: linear-gradient(180deg, #F7F2FB 0%, #F9FAFC 100%);
+}
+
+.big-block-dark {
+  color: #ffffff;
+  background: #0B0B22;
+}
+
 .page-header {
   position: fixed;
   top: 26px;
@@ -324,7 +335,7 @@
 
 @media (min-width: 768px) and (max-width: 1199px) {
 
-  .contact-us__wrapper {padding-top: 90px 26px 45px;}
+  .contact-us__wrapper {padding: 90px 26px 45px;}
 
   .contact-us__wrapper-title {
     font-size: 40px;

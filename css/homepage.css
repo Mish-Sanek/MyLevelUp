@@ -6,7 +6,7 @@
   justify-content: center;
   width: 100%;
   min-height: 800px;
-  background-image: url('../img/homepage/hero-bg-texture.png');
+  background-image: url('../img/hero-bg-texture.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -1190,8 +1190,6 @@
 
 /* students */
 
-.big-block {background: linear-gradient(180deg, #E3F2FD, #FFF);}
-
 .students {
   max-width: 1240px;
   padding: 150px 20px 0;
@@ -1521,11 +1519,6 @@
 
 /* free lessons */
 
-.big-block-dark {
-  color: #ffffff;
-  background: #0B0B22;
-}
-
 .free-lessons {padding: 152px 20px 0;}
 
 .free-lessons__title {
@@ -1836,10 +1829,6 @@
 
 
 /* testimonials */
-
-.big-block–gray {
-  background: linear-gradient(180deg, #F7F2FB 0%, #F9FAFC 100%);
-}
 
 .testimonials {
   max-width: 1240px;
