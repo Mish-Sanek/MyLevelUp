@@ -1,7 +1,18 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .about-hero {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   z-index: 1;
 }
 
@@ -37,8 +48,12 @@
 }
 
 .about-hero__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 46px auto 0;
   gap: 10px;
 }
@@ -57,9 +72,15 @@
 }
 
 .about-hero__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-top: 150px;
 }
 
@@ -69,7 +90,8 @@
   background-color: #ffffff;
   border-radius: 20px;
   border: 1px solid #E3E6E9;
-  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.08);
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.08);
 }
 
 .about-hero__list-item b {
@@ -141,7 +163,8 @@
   .about-hero__links {margin: 30px auto 0;}
 
   .about-hero__list {
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     margin-top: 91px;
   }
 
@@ -199,9 +222,15 @@
 }
 
 .redefining__info-users {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 61px;
 }
 
@@ -219,8 +248,12 @@
 
 .redefining__info-footer {
   margin-top: 64px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 10px;
 }
 
@@ -331,8 +364,12 @@
 }
 
 .location__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-top: 64px;
 }
 
@@ -342,7 +379,8 @@
 
 .location__info-map {
   border-radius: 20px;
-  filter: invert(1);
+  -webkit-filter: invert(1);
+          filter: invert(1);
 }
 
 .location__info-address {
@@ -454,10 +492,17 @@
 /* companies */
 
 .companies {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   max-width: 1240px;
   padding: 200px 20px 150px;
   margin: 0 auto;
@@ -558,8 +603,12 @@
 }
 
 .founders__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-top: 100px;
 }
 
@@ -569,7 +618,8 @@
   background-color: #ffffff;
   border-radius: 20px;
   border: 1px solid #E3E6E9;
-  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.04);
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.04);
+          box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.04);
 }
 
 .founders__avatar {
@@ -618,16 +668,26 @@
 .founders__sublist li {margin-top: 20px;}
 
 .founders__user-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 10px;
   margin-top: 44px;
 }
 
 .founders__user-links a {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 54px;
   height: 54px;
   background-color: #F3F3F3;
@@ -745,10 +805,3 @@
     margin-top: 16px;
   }
 }
-
-
-
-/*
-@media (max-width: 767px) {}
-@media (min-width: 768px) and (max-width: 1199px) {}
-*/
