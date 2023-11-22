@@ -8,11 +8,11 @@
   overflow: hidden;
 }
 
-.big-block {background: -webkit-gradient(linear, left top, left bottom, from(#E3F2FD), to(#FFF));background: -o-linear-gradient(top, #E3F2FD, #FFF);background: linear-gradient(180deg, #E3F2FD, #FFF);}
+.big-block {background: -o-linear-gradient(top, #E3F2FD, #FFF);background: -webkit-gradient(linear, left top, left bottom, from(#E3F2FD), to(#FFF));background: linear-gradient(180deg, #E3F2FD, #FFF);}
 
 .big-block–gray {
-  background: -webkit-gradient(linear, left top, left bottom, from(#F7F2FB), to(#F9FAFC));
   background: -o-linear-gradient(top, #F7F2FB 0%, #F9FAFC 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#F7F2FB), to(#F9FAFC));
   background: linear-gradient(180deg, #F7F2FB 0%, #F9FAFC 100%);
 }
 
@@ -32,31 +32,29 @@
   transition: color 0.5s ease, background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease, transform 0.5s ease, opacity 0.5s ease, filter 0.5s ease, -webkit-box-shadow 0.5s ease, -webkit-transform 0.5s ease, -webkit-filter 0.5s ease;
 }
 
-.page-header a:not(.page-header__logo):hover,
-.founders__user-links a:hover {
-  -webkit-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-          transform: scale(1.1);
-  opacity: 0.7;
+.page-header__links a:first-child:hover,
+.page-hero__footer a:last-child:hover,
+.job__info-footer a:hover,
+.contact-us__form button:hover,
+.about-hero__links a:last-child:hover,
+.redefining__info-footer a:last-child:hover {
+  background-color: #EBEBEB;
+  border-color: #EBEBEB;
+}
+
+.page-header__links a:last-child:hover,
+.about-hero__links a:first-child:hover {
+  background-color: #3FA9FC;
 }
 
 .page-hero__footer a:first-child:hover,
-.job__info-footer a:first-child:hover {
-  background-color: #3B83FE;
-  border-color: #3B83FE;
-}
-
-.page-hero__footer a:last-child:hover,
-.job__info-footer a:last-child:hover,
-.about-hero__links a:hover {
-  -webkit-box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.2);
+.job__info-footer a:first-child:hover,
+.redefining__info-footer a:hover {
+  background-color: #F693FF;
 }
 
 .tomorrow__list-item a:hover,
-.stories__item a:hover,
-.contact-us__form button:hover,
-.contact-us__form input:focus {
+.stories__item a:hover {
   -webkit-filter: invert(1);
           filter: invert(1);
 }
@@ -66,11 +64,6 @@
 .page-footer__info a:hover::after {-webkit-transform: translate3d(5px,0,0);transform: translate3d(5px,0,0);}
 
 .page-footer__bottom a:hover {text-decoration: underline;}
-
-.redefining__info-footer a:hover {
-  -webkit-box-shadow: 0 0 0 2px #ffffff;
-          box-shadow: 0 0 0 2px #ffffff;
-}
 
 .page-footer__mail:hover {opacity: 0.6;}
 
@@ -109,6 +102,33 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.page-header__nav a {position: relative;}
+
+.page-header__nav a::before {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #262626;
+  content: '';
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.page-header__nav a:hover::before {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
 }
 
 .page-header__nav a:not(:first-child) {
