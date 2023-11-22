@@ -657,16 +657,11 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-image: -webkit-gradient(linear, right bottom, left top, color-stop(10%, #00a7ee), color-stop(65%, #55ccff), color-stop(200%, white));
   background-image: -o-linear-gradient(bottom right, #00a7ee 10%, #55ccff 65%, white 200%);
+  background-image: -webkit-gradient(linear, right bottom, left top, color-stop(10%, #00a7ee), color-stop(65%, #55ccff), color-stop(200%, white));
   background-image: linear-gradient(to top left, #00a7ee 10%, #55ccff 65%, white 200%);
   z-index: 99999;
   will-change: transform;
-  -webkit-transition: -webkit-transform 0.3s ease;
-  transition: -webkit-transform 0.3s ease;
-  -o-transition: transform 0.3s ease;
-  transition: transform 0.3s ease;
-  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
   -webkit-transform-origin: center top;
       -ms-transform-origin: center top;
           transform-origin: center top;
@@ -677,6 +672,11 @@
 .auth-window.active {
   -webkit-transform: scale3d(1, 1, 1);
           transform: scale3d(1, 1, 1);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
 .auth-window__close {
@@ -719,26 +719,16 @@
 .auth-window__form input:hover,
 .auth-window__form textarea:hover {opacity: 0.8;}
 
-.auth-window__form input::-webkit-input-placeholder, .auth-window__form textarea::-webkit-input-placeholder {
-  color: #ffffff;
-}
+.auth-window__form input::-webkit-input-placeholder, .auth-window__form textarea::-webkit-input-placeholder {color: #ffffff;}
 
-.auth-window__form input::-moz-placeholder, .auth-window__form textarea::-moz-placeholder {
-  color: #ffffff;
-}
+.auth-window__form input::-moz-placeholder, .auth-window__form textarea::-moz-placeholder {color: #ffffff;}
 
-.auth-window__form input:-ms-input-placeholder, .auth-window__form textarea:-ms-input-placeholder {
-  color: #ffffff;
-}
+.auth-window__form input:-ms-input-placeholder, .auth-window__form textarea:-ms-input-placeholder {color: #ffffff;}
 
-.auth-window__form input::-ms-input-placeholder, .auth-window__form textarea::-ms-input-placeholder {
-  color: #ffffff;
-}
+.auth-window__form input::-ms-input-placeholder, .auth-window__form textarea::-ms-input-placeholder {color: #ffffff;}
 
 .auth-window__form input::placeholder,
-.auth-window__form textarea::placeholder {
-  color: #ffffff;
-}
+.auth-window__form textarea::placeholder {color: #ffffff;}
 
 .auth-window__form input:focus::-webkit-input-placeholder, .auth-window__form textarea:focus::-webkit-input-placeholder {
   color: #171837;
@@ -771,6 +761,8 @@
 .auth-window__form input {
   padding-bottom: 10px;
 }
+
+.auth-window__form textarea {height: 30px;}
 
 .auth-window__form button {
   width: 100%;
