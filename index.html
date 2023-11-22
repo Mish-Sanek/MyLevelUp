@@ -25,13 +25,13 @@
         <img src="img/logo.svg" alt="My Level Up logo">
       </a>
       <nav class="page-header__nav">
-        <a href="">Our courses</a>
+        <a href="#our-courses">Our courses</a>
         <a href="about-us.html">About us</a>
-        <a href="">Reviews</a>
+        <a href="#reviews">Reviews</a>
         <a href="">Blog</a>
       </nav>
       <div class="page-header__links">
-        <a href="">Sign In</a>
+        <a class="page-header__sign-in">Sign In</a>
         <a href="" target="_blank">Get started</a>
       </div>
       <button class="page-header__menu-btn"></button>
@@ -117,7 +117,7 @@
     <!-- potential end -->
 
     <!-- tomorrow -->
-    <div class="tomorrow">
+    <div class="tomorrow" id="our-courses">
       <section class="tomorrow__section">
         <h2 class="tomorrow__title">Mastering Tomorrow: Courses Crafted for the Future</h2>
         <p class="tomorrow__descr">Embark on a journey towards professional excellence and secure your ideal career
@@ -471,7 +471,7 @@
     <!-- big block gray -->
     <div class="big-block–gray">
       <!-- testimonials -->
-      <section class="testimonials">
+      <section class="testimonials" id="reviews">
         <h2 class="testimonials__title">Testimonials from Our Learners</h2>
         <ul class="testimonials__list">
           <li class="testimonials__item">
@@ -547,7 +547,7 @@
         </p>
         <img src="img/homepage/mission.png" class="our-mission__img" loading="lazy" alt="">
         <blockquote class="our-mission__quote">
-          <span class="our-mission__quote-author">Febin Raj</span>
+          <span class="our-mission__quote-author">Nilima Kulkarni</span>
           <b class="our-mission__quote-text">
             We intend to equip students with skills that will be in demand in the Asian job market for at least another
             30 years. This gives people a sense of confidence in the future, which is especially important after about
@@ -633,10 +633,12 @@
         <a href="mailto:support@mylevelup.com" class="page-footer__mail">support@mylevelup.com</a>
         <div class="page-footer__info">
           <address>
-            <p>Mylevelup E-Learning Philippines Corp.</p>
-            <p>TIN: 602-900-516-00000</p>
-            <p>SEC: 2021090024799-07</p>
-            <p>F27 The Enterprise Center Tower 2, Ayala Ave. cor. Paseo de Roxas Ave., Makati 1226</p>
+            <p>EDULIGENCE PRIVATE LIMITED</p>
+            <p>CIN U62013KA2023PTC179677</p>
+            <p>PAN AAHCE8213H</p>
+            <p>TAN BLRE13707B</p>
+            <p>WeWork Prestige Atlanta,80 Ft Main Road 1A BLOCK,Koramangala I Block,Bangalore
+              South,Bangalore-560034,Karnataka</p>
           </address>
           <nav class="">
             <a href="" target="_blank">Facebook</a>
@@ -656,6 +658,21 @@
       </div>
     </footer>
     <!-- page footer end -->
+  </div>
+
+  <div class="auth-window">
+    <button class="auth-window__close"></button>
+    <form class="auth-window__form">
+      <h4 class="auth-window__form-title">Sign In</h4>
+      <input type="text" placeholder="Fullname">
+      <input type="email" placeholder="Email" inputmode="email">
+      <input type="password" placeholder="Password">
+      <input type="tel" inputmode="tel" placeholder="Telephone number">
+      <input type="text" placeholder="Whatsapp/Telegram">
+      <textarea class="" placeholder="About yourself"></textarea>
+      <textarea placeholder="Courses you'd like to see"></textarea>
+      <button>GO</button>
+    </form>
   </div>
 
   <script src="js/common.js"></script>
