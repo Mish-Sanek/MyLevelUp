@@ -801,6 +801,11 @@
 
 .modal-window__form-row input[type="checkbox"]:checked + .modal-window__form-terms::after {display: block;}
 
+.modal-window__form-terms a {
+  color: #3B83FE;
+  text-decoration: underline;
+}
+
 .modal-window__form--register .modal-window__form-submit {
   width: 258px;
   background-color: #3B83FE;
