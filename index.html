@@ -30,9 +30,9 @@
         <a href="#reviews">Reviews</a>
         <a href="">Blog</a>
       </nav>
-      <div class="page-header__links">
-        <a class="page-header__sign-in">Sign In</a>
-        <a href="" target="_blank">Get started</a>
+      <div class="page-header__buttons">
+        <button type="button" class="page-header__login">Sign In</button>
+        <button type="button" class="page-header__register">Get started</button>
       </div>
       <button class="page-header__menu-btn"></button>
     </header>
@@ -658,21 +658,59 @@
       </div>
     </footer>
     <!-- page footer end -->
-  </div>
 
-  <div class="auth-window">
-    <button class="auth-window__close"></button>
-    <form class="auth-window__form">
-      <h4 class="auth-window__form-title">Sign In</h4>
-      <input type="text" placeholder="Fullname">
-      <input type="email" placeholder="Email" inputmode="email">
-      <input type="password" placeholder="Password">
-      <input type="tel" inputmode="tel" placeholder="Telephone number">
-      <input type="text" placeholder="Whatsapp/Telegram">
-      <textarea class="" placeholder="About yourself"></textarea>
-      <textarea placeholder="Courses you'd like to see"></textarea>
-      <button>GO</button>
-    </form>
+    <div class="modal-window">
+
+      <!-- login -->
+      <div class="modal-window__auth modal-window__auth--login">
+        <div class="modal-window__auth-img">
+          <picture>
+            <source media="(min-width: 768px) and (max-width: 1199px)" srcset="img/login-pic@tablet.jpg" />
+            <img src="img/login-pic.jpg" loading="lazy" alt="" />
+          </picture>
+        </div>
+        <form class="modal-window__form">
+          <h4 class="modal-window__form-title">Log In</h4>
+          <p class="modal-window__form-descr">Enter your login details</p>
+          <button type="button" class="modal-window__close"></button>
+          <input type="text" placeholder="Email/login">
+          <input type="password" placeholder="Password">
+          <button class="modal-window__form-submit" type="submit">Sign In now</button>
+          <p class="modal-window__form-route-help">I don’t have an account</p>
+          <button class="modal-window__form-route modal-window__form-route--login">Create account</button>
+        </form>
+      </div>
+      <!-- login end -->
+
+      <!-- register -->
+      <div class="modal-window__auth modal-window__auth--register">
+        <div class="modal-window__auth-img">
+          <img src="img/reg-pic.jpg" loading="lazy" alt="" />
+        </div>
+        <form class="modal-window__form modal-window__form--register">
+          <h4 class="modal-window__form-title">Create account</h4>
+          <p class="modal-window__form-descr">Enter your login details</p>
+          <button type="button" class="modal-window__close"></button>
+          <fieldset class="modal-window__form-row">
+            <input type="text" placeholder="Full name">
+            <input type="password" placeholder="Password">
+          </fieldset>
+          <fieldset class="modal-window__form-row">
+            <input type="email" placeholder="Email" inputmode="email">
+            <input type="tel" inputmode="tel" placeholder="Phone number">
+          </fieldset>
+          <fieldset class="modal-window__form-row">
+            <input type="text" placeholder="Your telegram or whatsapp" inputmode="email">
+            <input type="text" inputmode="tel" placeholder="About you">
+          </fieldset>
+          <input type="text" placeholder="Interested courses">
+          <button class="modal-window__form-submit" type="submit">Create now</button>
+          <p class="modal-window__form-route-help">I have an account</p>
+          <button class="modal-window__form-route modal-window__form-route--register">Log in</button>
+        </form>
+      </div>
+      <!-- register end -->
+    </div>
   </div>
 
   <script src="js/common.js"></script>

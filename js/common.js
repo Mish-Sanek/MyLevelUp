@@ -1,39 +1,33 @@
 // sign in form
 
-const signInButton = document.querySelector('.page-header__sign-in');
-const authWindow = document.querySelector('.auth-window');
-const authWindowCloseBtn = authWindow.querySelector('.auth-window__close');
-const authForm = authWindow.querySelectorAll('.auth-window__form');
-const authWindowTextareas = authWindow.querySelectorAll('.auth-window__form textarea');
+const loginButton = document.querySelector('.page-header__login');
+const registerButton = document.querySelector('.page-header__register');
+const modalWindow = document.querySelector('.modal-window');
+const loginWindow = modalWindow.querySelector('.modal-window__auth--login');
+const closeLoginBtn = loginWindow.querySelector('.modal-window__close');
+const registerWindow = modalWindow.querySelector('.modal-window__auth--register');
+const closeRegisterBtn = registerWindow.querySelector('.modal-window__close');
 
-authWindowTextareas.forEach(element => {
-  element.addEventListener('keyup', () => {
-    element.style.height = "0";
-    element.style.height = (25 + element.scrollHeight) + "px";
-    console.log(element.value.length);
-
-    if (element.value.length === 0) {
-      console.log('0');
-      element.style.height = "30px";
-    }
-  });
+loginButton.addEventListener('click', () => {
+  modalWindow.classList.add('active');
+  loginWindow.classList.add('active');
 });
 
-
-authForm.forEach(element => {
-  element.addEventListener('focus', (e) => {
-    e.preventDefault();
-  })
+registerButton.addEventListener('click', () => {
+  modalWindow.classList.add('active');
+  registerWindow.classList.add('active');
 });
 
+closeLoginBtn.addEventListener('click', () => {
+  modalWindow.classList.remove('active');
+  loginWindow.classList.remove('active');
+})
 
-signInButton.addEventListener('click', () => {
-  authWindow.classList.add('active');
-});
+closeRegisterBtn.addEventListener('click', () => {
+  modalWindow.classList.remove('active');
+  registerWindow.classList.remove('active');
+})
 
-authWindowCloseBtn.addEventListener('click', () => {
-  authWindow.classList.remove('active');
-});
 
 
 
