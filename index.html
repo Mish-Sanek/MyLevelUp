@@ -673,11 +673,11 @@
           <h4 class="modal-window__form-title">Log In</h4>
           <p class="modal-window__form-descr">Enter your login details</p>
           <button type="button" class="modal-window__close"></button>
-          <input type="text" placeholder="Email/login">
-          <input type="password" placeholder="Password">
+          <input type="text" placeholder="Email/login" required>
+          <input type="password" placeholder="Password" required>
           <button class="modal-window__form-submit" type="submit">Sign In now</button>
           <p class="modal-window__form-route-help">I don’t have an account</p>
-          <button class="modal-window__form-route modal-window__form-route--login">Create account</button>
+          <button type="button" class="modal-window__form-route modal-window__form-route--login">Create account</button>
         </form>
       </div>
       <!-- login end -->
@@ -692,21 +692,26 @@
           <p class="modal-window__form-descr">Enter your login details</p>
           <button type="button" class="modal-window__close"></button>
           <fieldset class="modal-window__form-row">
-            <input type="text" placeholder="Full name">
-            <input type="password" placeholder="Password">
+            <input type="text" placeholder="Full name" required>
+            <input type="password" placeholder="Password" required>
           </fieldset>
           <fieldset class="modal-window__form-row">
-            <input type="email" placeholder="Email" inputmode="email">
-            <input type="tel" inputmode="tel" placeholder="Phone number">
+            <input type="email" placeholder="Email" inputmode="email" required>
+            <input type="tel" inputmode="tel" placeholder="Phone number" required>
           </fieldset>
           <fieldset class="modal-window__form-row">
-            <input type="text" placeholder="Your telegram or whatsapp" inputmode="email">
-            <input type="text" inputmode="tel" placeholder="About you">
+            <input type="text" placeholder="Your telegram or whatsapp" inputmode="email" required>
+            <input type="text" inputmode="tel" placeholder="About you" required>
           </fieldset>
           <input type="text" placeholder="Interested courses">
-          <button class="modal-window__form-submit" type="submit">Create now</button>
+          <div class="modal-window__form-row">
+            <input type="checkbox" name="" id="form-terms" required>
+            <label for="form-terms" class="modal-window__form-terms">I agree to our privacy policy, terms of use and
+              training agreement.</label>
+            <button class="modal-window__form-submit" type="submit">Create now</button>
+          </div>
           <p class="modal-window__form-route-help">I have an account</p>
-          <button class="modal-window__form-route modal-window__form-route--register">Log in</button>
+          <button type="button" class="modal-window__form-route modal-window__form-route--register">Log in</button>
         </form>
       </div>
       <!-- register end -->

@@ -7,6 +7,8 @@ const loginWindow = modalWindow.querySelector('.modal-window__auth--login');
 const closeLoginBtn = loginWindow.querySelector('.modal-window__close');
 const registerWindow = modalWindow.querySelector('.modal-window__auth--register');
 const closeRegisterBtn = registerWindow.querySelector('.modal-window__close');
+const routeToRegisterBtn = registerWindow.querySelector('.modal-window__form-route--register');
+const routeToLoginBtn = loginWindow.querySelector('.modal-window__form-route--login');
 
 loginButton.addEventListener('click', () => {
   modalWindow.classList.add('active');
@@ -27,6 +29,16 @@ closeRegisterBtn.addEventListener('click', () => {
   modalWindow.classList.remove('active');
   registerWindow.classList.remove('active');
 })
+
+routeToRegisterBtn.addEventListener('click', () => {
+  loginWindow.classList.add('active');
+  registerWindow.classList.remove('active');
+});
+
+routeToLoginBtn.addEventListener('click', () => {
+  registerWindow.classList.add('active');
+  loginWindow.classList.remove('active');
+});
 
 
 

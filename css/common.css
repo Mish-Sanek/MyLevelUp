@@ -652,19 +652,25 @@
   bottom: 0;
   left: 0;
   display: none;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: rgba(11, 11, 34, 0.60);
   z-index: 99999;
 }
 
 .modal-window.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 .modal-window > * {display: none;}
 
-.modal-window > *.active {display: flex;}
+.modal-window > *.active {display: -webkit-box;display: -ms-flexbox;display: flex;}
 
 
 .modal-window__auth {
@@ -723,13 +729,23 @@
   color: #111135;
   border-radius: 40px;
   border: 1px solid #E7E2E2;
+  -webkit-transition: border-color 0.5s ease;
+  -o-transition: border-color 0.5s ease;
   transition: border-color 0.5s ease;
 }
 
+.modal-window__form-row input[type="checkbox"] {display: none;}
+
 .modal-window__form-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .modal-window__form-row input {width: 258px;}
@@ -746,7 +762,49 @@
   border-radius: 40px;
 }
 
-.modal-window__form--register .modal-window__form-submit {background-color: #3B83FE;}
+.modal-window__form-terms {
+  position: relative;
+  width: 234px;
+  padding-left: 32px;
+  margin-top: 14px;
+  font-size: 14px;
+}
+
+.modal-window__form-terms::before,
+.modal-window__form-terms::after {
+  position: absolute;
+  display: block;
+  content: '';
+  cursor: pointer;
+}
+
+.modal-window__form-terms::before {
+  top: calc(50% - 12px);
+  left: 0;
+  width: 21px;
+  height: 21px;
+  border: 2px solid #3B82FE;
+}
+
+.modal-window__form-terms::after {
+  display: none;
+  top: calc(50% - 5px);
+  left: 4px;
+  width: 15px;
+  height: 5px;
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
+  -webkit-transform: rotate(319deg);
+  -ms-transform: rotate(319deg);
+  transform: rotate(319deg);
+}
+
+.modal-window__form-row input[type="checkbox"]:checked + .modal-window__form-terms::after {display: block;}
+
+.modal-window__form--register .modal-window__form-submit {
+  width: 258px;
+  background-color: #3B83FE;
+}
 
 .modal-window__form-route-help {
   margin-top: 65px;
