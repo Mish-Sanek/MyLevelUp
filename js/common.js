@@ -1,7 +1,44 @@
+// basic header
+const pageHeader = document.querySelector('.page-header');
+const languagesBlocks = pageHeader.querySelectorAll('.page-header__languages');
+const headerButton = pageHeader.querySelector('.page-header__menu-btn');
+const headerNav = pageHeader.querySelector('.page-header__nav');
+
+headerButton.addEventListener('click', () => {
+  headerButton.classList.toggle('active');
+  headerNav.classList.toggle('opened');
+
+  if (headerButton.classList.contains('active')) {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = '';
+  }
+});
+
+languagesBlocks.forEach((block) => {
+  const btn = block.querySelector('.page-header__languages-set');
+  const languagesListItem = block.querySelectorAll('.page-header__languages-list-item');
+
+  btn.addEventListener('click', () => btn.classList.toggle('active'));
+  languagesListItem.forEach((item) => {
+    item.addEventListener('click', () => {
+      btn.classList.remove('active')
+
+      if (headerNav.classList.contains('opened')) {
+        console.log(true);
+        headerButton.classList.remove('active');
+        headerNav.classList.remove('opened')
+      } else {
+        console.log(false);
+      }
+    });
+  })
+})
+
 // sign in form
 
-const loginButton = document.querySelector('.page-header__login');
-const registerButton = document.querySelector('.page-header__register');
+const loginButton = pageHeader.querySelector('.page-header__login');
+const registerButton = pageHeader.querySelector('.page-header__register');
 const modalWindow = document.querySelector('.modal-window');
 const loginWindow = modalWindow.querySelector('.modal-window__auth--login');
 const closeLoginBtn = loginWindow.querySelector('.modal-window__close');
@@ -38,22 +75,4 @@ routeToRegisterBtn.addEventListener('click', () => {
 routeToLoginBtn.addEventListener('click', () => {
   registerWindow.classList.add('active');
   loginWindow.classList.remove('active');
-});
-
-
-
-
-// mobile menu
-const headerButton = document.querySelector('.page-header__menu-btn');
-const headerNav = document.querySelector('.page-header__nav');
-
-headerButton.addEventListener('click', () => {
-  headerButton.classList.toggle('active');
-  headerNav.classList.toggle('opened');
-
-  if (headerButton.classList.contains('active')) {
-    document.body.style.overflow = 'hidden';
-  } else {
-    document.body.style.overflow = '';
-  }
 });

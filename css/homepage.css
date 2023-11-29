@@ -1775,20 +1775,13 @@
 
 .free-lessons__video {
   display: block;
+  width: 100%;
   max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  aspect-ratio: 1 / 0.56;
   border-radius: 30px;
-}
-
-.free-lessons__video-play {
-  position: absolute;
-  top: calc(50% - 45px);
-  left: calc(50% - 45px);
-  width: 90px;
-  height: 90px;
-  background: rgba(255, 255, 255, 0.2);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  border-radius: 50%;
+  border: none;
 }
 
 @media (max-width: 767px) {
@@ -1825,13 +1818,6 @@
 
   .free-lessons__video {border-radius: 14px;}
 
-  .free-lessons__video-play {
-    top: calc(50% - 30px);
-    left: calc(50% - 30px);
-    width: 60px;
-    height: 60px;
-  }
-
   .free-lessons__bg {display: none;}
 }
 
@@ -1861,13 +1847,6 @@
   .free-lessons__video-wrapper {margin-top: 72px;}
 
   .free-lessons__bg {display: none;}
-
-  .free-lessons__video-play {
-    top: calc(50% - 30px);
-    left: calc(50% - 30px);
-    width: 60px;
-    height: 60px;
-  }
 }
 
 
